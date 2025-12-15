@@ -1181,29 +1181,44 @@
           </div>
 
           <div class="services-grid">
-            <!-- Acrylic sets -->
+            <!-- Acrylic Sets & Manicures -->
             <div class="card service-card">
-              <h3>Acrylic Sets</h3>
+              <h3>Acrylic Sets & Manicures</h3>
               <small>Custom designs, charms, &amp; glam details.</small>
 
               <div class="price-item">
-                <span class="price-title">Full Set</span>
+                <span class="price-title">Acrylic Full Set</span>
                 <span>$50</span>
               </div>
-
+              
               <div class="price-item">
-                <span class="price-title">Design Set</span>
+                <span class="price-title">Acrylic Design Set</span>
                 <span>$65</span>
               </div>
 
               <div class="price-item">
-                <span class="price-title">Charm Set</span>
+                <span class="price-title">Acrylic Charm Set</span>
                 <span>$75</span>
               </div>
 
               <div class="price-item">
-                <span class="price-title">Charm / Design Set</span>
+                <span class="price-title">Acrylic Charm/Design Set</span>
                 <span>$80</span>
+              </div>
+
+              <div class="price-item" style="margin-top: 0.8rem;">
+                <span class="price-title">Basic Manicure</span>
+                <span>$40</span>
+              </div>
+
+              <div class="price-item">
+                <span class="price-title">Design Manicure</span>
+                <span>$45</span>
+              </div>
+
+              <div class="price-item">
+                <span class="price-title">Charm/Design Manicure</span>
+                <span>$55</span>
               </div>
 
               <div class="addon-title">Length add-ons</div>
