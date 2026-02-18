@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -1187,13 +1186,13 @@
               <small>Custom designs, charms, &amp; glam details.</small>
 
               <div class="price-item">
-                <span class="price-title">Acrylic Full Set</span>
-                <span>$50</span>
+                <span class="price-title">Full Set Acrylic Nails</span>
+                <span>$60</span>
               </div>
               
               <div class="price-item">
                 <span class="price-title">Acrylic Design Set</span>
-                <span>$65</span>
+                <span>$75</span>
               </div>
 
               <div class="price-item">
@@ -1203,17 +1202,23 @@
 
               <div class="price-item">
                 <span class="price-title">Acrylic Charm/Design Set</span>
-                <span>$80</span>
+                <span>$85</span>
               </div>
+
+              <div class="price-item">
+                <span class="price-title">Freestyle</span>
+                <span>$65</span>
+              </div>
+              <p class="price-desc">(Nail tech choice only)</p>
 
               <div class="price-item" style="margin-top: 0.8rem;">
                 <span class="price-title">Basic Manicure</span>
-                <span>$40</span>
+                <span>$45</span>
               </div>
 
               <div class="price-item">
                 <span class="price-title">Design Manicure</span>
-                <span>$45</span>
+                <span>$50</span>
               </div>
 
               <div class="price-item">
@@ -1412,25 +1417,25 @@
             <div class="gallery-strip">
               <div class="gallery-track" id="galleryTrack">
                 <div class="gallery-slide">
-                  <img src="https://github.com/Bakerreniya/AshawnizNailz/blob/8c168792d0ef172cfc4bbcf319068f2f89370ffb/IMG_6802.jpeg?raw=1" alt="Client nail set 1 by Ashawniz Nailz" />
+                  <img src="https://i.postimg.cc/ZqYtzPjx/IMG-7932.jpg" alt="Client nail set 1 by Ashawniz Nailz" />
                 </div>
                 <div class="gallery-slide">
-                  <img src="https://github.com/Bakerreniya/AshawnizNailz/blob/8c168792d0ef172cfc4bbcf319068f2f89370ffb/IMG_6803.jpeg?raw=1" alt="Client nail set 2 by Ashawniz Nailz" />
+                  <img src="https://i.postimg.cc/ZqYtzPjP/IMG-7936.jpg" alt="Client nail set 2 by Ashawniz Nailz" />
                 </div>
                 <div class="gallery-slide">
-                  <img src="https://github.com/Bakerreniya/AshawnizNailz/blob/8c168792d0ef172cfc4bbcf319068f2f89370ffb/IMG_6805.jpeg?raw=1" alt="Client nail set 3 by Ashawniz Nailz" />
+                  <img src="https://i.postimg.cc/R0C5x1Gw/IMG-7937.jpg" alt="Client nail set 3 by Ashawniz Nailz" />
                 </div>
                 <div class="gallery-slide">
-                  <img src="https://github.com/Bakerreniya/AshawnizNailz/blob/8c168792d0ef172cfc4bbcf319068f2f89370ffb/IMG_6808.jpeg?raw=1" alt="Client nail set 4 by Ashawniz Nailz" />
+                  <img src="https://i.postimg.cc/XvNS6KxF/IMG-7938.jpg" alt="Client nail set 4 by Ashawniz Nailz" />
                 </div>
                 <div class="gallery-slide">
-                  <img src="https://github.com/Bakerreniya/AshawnizNailz/blob/8c168792d0ef172cfc4bbcf319068f2f89370ffb/IMG_6809.jpeg?raw=1" alt="Client nail set 5 by Ashawniz Nailz" />
+                  <img src="https://i.postimg.cc/tgRQGdDx/IMG-7939.jpg" alt="Client nail set 5 by Ashawniz Nailz" />
                 </div>
                 <div class="gallery-slide">
-                  <img src="https://github.com/Bakerreniya/AshawnizNailz/blob/8c168792d0ef172cfc4bbcf319068f2f89370ffb/IMG_6810.jpeg?raw=1" alt="Client nail set 6 by Ashawniz Nailz" />
+                  <img src="https://i.postimg.cc/q7BVHcQh/IMG-7940.jpg" alt="Client nail set 6 by Ashawniz Nailz" />
                 </div>
                 <div class="gallery-slide">
-                  <img src="https://github.com/Bakerreniya/AshawnizNailz/blob/8c168792d0ef172cfc4bbcf319068f2f89370ffb/IMG_6811.jpeg?raw=1" alt="Client nail set 7 by Ashawniz Nailz" />
+                  <img src="https://i.postimg.cc/R0C5x1GS/IMG-7941.jpg" alt="Client nail set 7 by Ashawniz Nailz" />
                 </div>
               </div>
 
