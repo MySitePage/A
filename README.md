@@ -1135,7 +1135,7 @@
             </div>
           </div>
 
-          <!-- BOOKING FORM - Fixed phone field -->
+          <!-- BOOKING FORM - No phone field, email is primary contact -->
           <div class="booking-card" id="booking">
             <div class="booking-header">
               <span>📅</span>
@@ -1146,27 +1146,20 @@
             </div>
 
             <form action="https://forminit.com/f/ubtd9cmwaiy" method="POST" enctype="multipart/form-data" id="bookingForm">
-              <!-- Contact Information -->
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Full Name *</label>
-                  <input type="text" name="fi-sender-fullName" placeholder="First & last name" required>
-                </div>
-                <div class="form-group">
-                  <label>Email *</label>
-                  <input type="email" name="fi-sender-email" placeholder="your@email.com" required>
-                </div>
+              <!-- Contact Information - Phone removed -->
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" name="fi-sender-fullName" placeholder="First & last name" required>
               </div>
 
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Phone *</label>
-                  <input type="text" name="fi-sender-phone" placeholder="(123) 456-7890" required>
-                </div>
-                <div class="form-group">
-                  <label>Instagram (optional)</label>
-                  <input type="text" name="fi-text-instagram" placeholder="@username - so I can tag you!">
-                </div>
+              <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="fi-sender-email" placeholder="your@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label>Instagram (optional)</label>
+                <input type="text" name="fi-text-instagram" placeholder="@username - so I can tag you!">
               </div>
 
               <!-- Preferred Date & Time -->
