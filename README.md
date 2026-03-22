@@ -67,7 +67,6 @@
       display: block;
     }
 
-    /* Layout */
     .page {
       min-height: 100vh;
       position: relative;
@@ -191,7 +190,6 @@
       font-size: 1rem;
     }
 
-    /* Mobile nav */
     .nav-toggle {
       display: none;
       background: none;
@@ -234,7 +232,7 @@
       }
     }
 
-    /* Hero */
+    /* Hero with booking form */
     .hero {
       padding: 3.5rem 0 2.5rem;
       position: relative;
@@ -256,7 +254,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
       gap: 2.3rem;
-      align-items: center;
+      align-items: start;
     }
 
     @media (max-width: 900px) {
@@ -397,108 +395,164 @@
       color: var(--text-light);
     }
 
-    /* Hero card / fake gallery */
-    .hero-card {
-      background: linear-gradient(135deg, rgba(255, 179, 230, 0.9), rgba(217, 179, 255, 0.9));
+    /* Booking Form Card - Transparent */
+    .booking-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
       border-radius: 32px;
-      padding: 1.3rem 1.3rem 1.1rem;
+      padding: 1.5rem;
       box-shadow: var(--shadow-soft);
       border: 3px solid rgba(255, 255, 255, 0.9);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.3) 50%, transparent 60%);
-      animation: shimmer 3s infinite linear;
-    }
-
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .hero-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.7rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-card-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dark);
-    }
-
-    .hero-card-pill {
-      padding: 0.4rem 0.9rem;
-      border-radius: var(--radius-pill);
-      background: rgba(255, 255, 255, 0.7);
-      color: var(--text-dark);
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 15px rgba(255, 179, 230, 0.3);
-    }
-
-    .hero-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.35rem;
-      margin-bottom: 0.8rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-thumb {
-      aspect-ratio: 3 / 4;
-      border-radius: 18px;
-      overflow: hidden;
-      background: linear-gradient(135deg, rgba(255, 204, 255, 0.9), rgba(217, 179, 255, 0.9));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.65rem;
-      text-align: center;
-      padding: 0.4rem;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 8px 22px rgba(255, 179, 230, 0.4);
-      transform: translateY(0);
       transition: all 0.3s ease;
+    }
+
+    .booking-card:hover {
+      transform: translateY(-4px);
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 25px 45px rgba(255, 179, 230, 0.4);
+    }
+
+    .booking-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 700;
       color: var(--text-dark);
     }
 
-    .hero-thumb:nth-child(2) {
-      transform: translateY(4px);
+    .booking-sub {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid rgba(255, 179, 230, 0.3);
     }
 
-    .hero-thumb:nth-child(3) {
-      transform: translateY(8px);
+    .form-group {
+      margin-bottom: 1rem;
     }
 
-    .hero-thumb:hover {
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 14px 32px rgba(255, 179, 230, 0.6);
-    }
-
-    .hero-card-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .form-group label {
+      display: block;
       font-size: 0.7rem;
-      opacity: 0.9;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.3rem;
+      color: var(--text-dark);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border-radius: var(--radius-pill);
+      border: 2px solid rgba(255, 179, 230, 0.5);
+      background: rgba(255, 255, 255, 0.7);
+      font-family: "Poppins", sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-dark);
+      transition: all 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--purple-medium);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 0 3px rgba(217, 179, 255, 0.2);
+    }
+
+    .form-group textarea {
+      border-radius: 20px;
+      resize: vertical;
+      min-height: 60px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+    }
+
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.3rem;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 179, 230, 0.5);
+      font-size: 0.75rem;
+    }
+
+    .checkbox-item input {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      accent-color: var(--purple-medium);
+    }
+
+    .file-upload {
       position: relative;
-      z-index: 1;
+    }
+
+    .file-upload input {
+      padding: 0.5rem;
+      font-size: 0.7rem;
+    }
+
+    .booking-note {
+      font-size: 0.7rem;
+      background: rgba(255, 230, 245, 0.6);
+      padding: 0.7rem;
+      border-radius: 20px;
+      text-align: center;
+      margin: 1rem 0;
+      color: var(--text-light);
+    }
+
+    .booking-note strong {
+      color: var(--text-dark);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
+      color: var(--text-dark);
+      padding: 0.8rem;
+      border: none;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(255, 179, 230, 0.4);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(255, 179, 230, 0.6);
+    }
+
+    .success-message {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
       color: var(--text-dark);
     }
 
@@ -1004,6 +1058,9 @@
       .booking-strip {
         padding: 1.1rem 1rem;
       }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -1029,7 +1086,7 @@
             <a href="#policies">Policies</a>
             <a href="#location">Location</a>
             <a href="#gallery">Gallery</a>
-            <a href="#contact" class="nav-btn">
+            <a href="#booking" class="nav-btn">
               <span class="icon">💅🏾</span>
               <span>Book Now</span>
             </a>
@@ -1039,7 +1096,7 @@
     </header>
 
     <main>
-      <!-- HERO -->
+      <!-- HERO with Booking Form -->
       <section class="hero" id="top">
         <div class="container hero-grid">
           <div>
@@ -1053,7 +1110,7 @@
             </h1>
             <p class="hero-subtitle">
               Registered cosmetologist creating acrylic sets, pedicures, and custom designs for
-              clients who want their nails to match their energy. DM bookings accepted.
+              clients who want their nails to match their energy.
             </p>
 
             <div class="hero-badges">
@@ -1078,42 +1135,160 @@
             </div>
           </div>
 
-          <aside class="hero-card">
-            <div class="hero-card-header">
-              <div>
-                <div class="hero-card-title">Recent Sets</div>
-                <div style="font-size:0.75rem;opacity:0.85;">Soft glam · Bright colors · Bling</div>
-              </div>
-              <div class="hero-card-pill">SC Nail Tech ⭐</div>
+          <!-- BOOKING FORM - Connected to Forminit.io -->
+          <div class="booking-card" id="booking">
+            <div class="booking-header">
+              <span>📅</span>
+              <span>Request Appointment</span>
+            </div>
+            <div class="booking-sub">
+              Fill out the form below. I'll reach out within 24 hours to confirm your date & time.
             </div>
 
-            <div class="hero-gallery">
-              <div class="hero-thumb">
-                <span>Upload a photo of<br />your acrylic sets here.</span>
+            <form action="https://forminit.com/f/ubtd9cmvaiy" method="POST" enctype="multipart/form-data" id="bookingForm">
+              <!-- Contact Information -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name *</label>
+                  <input type="text" name="fi-sender-fullName" placeholder="First & last name" required>
+                </div>
+                <div class="form-group">
+                  <label>Email *</label>
+                  <input type="email" name="fi-sender-email" placeholder="your@email.com" required>
+                </div>
               </div>
-              <div class="hero-thumb">
-                <span>Perfect spot for<br />pedicure pics.</span>
-              </div>
-              <div class="hero-thumb">
-                <span>Feature your<br />favorite nail art.</span>
-              </div>
-            </div>
 
-            <div class="hero-card-footer">
-              <div>
-                <div style="font-size:0.74rem;opacity:0.9;">Now accepting DM bookings</div>
-                <div style="font-size:0.7rem;opacity:0.75;">Based in Florence, SC area</div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Phone *</label>
+                  <input type="tel" name="fi-sender-phone" placeholder="(123) 456-7890" required>
+                </div>
+                <div class="form-group">
+                  <label>Instagram (optional)</label>
+                  <input type="text" name="fi-text-instagram" placeholder="@username - so I can tag you!">
+                </div>
               </div>
-              <div class="social-row">
-                <a href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" rel="noopener" class="social-pill">TikTok</a>
-                <a href="https://instagram.com/ashawniz.nailz" target="_blank" rel="noopener" class="social-pill">IG</a>
+
+              <!-- Preferred Date & Time -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Preferred Date *</label>
+                  <input type="date" name="fi-date-preferred" required>
+                  <small style="font-size:0.6rem; color:#7a5a7c;">*This is a request - I will confirm availability</small>
+                </div>
+                <div class="form-group">
+                  <label>Preferred Time</label>
+                  <input type="text" name="fi-text-time" placeholder="e.g., 2pm, afternoon, after 5pm">
+                </div>
               </div>
+
+              <!-- Services (Cart style - multiple selection) -->
+              <div class="form-group">
+                <label>Select Services (can choose multiple) *</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Full Set Acrylic - $60"> Full Set Acrylic ($60)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Acrylic Design Set - $75"> Acrylic Design ($75)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm Set - $75"> Acrylic Charm ($75)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm/Design Set - $85"> Charm/Design Set ($85)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Basic Manicure - $45"> Basic Manicure ($45)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Classic Pedicure - $45"> Classic Pedicure ($45)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Deluxe Pedicure - $50"> Deluxe Pedicure ($50)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-service" value="Luxury Pedicure - $55"> Luxury Pedicure ($55)
+                  </label>
+                </div>
+              </div>
+
+              <!-- Add-Ons (gems, charms, etc.) -->
+              <div class="form-group">
+                <label>Add-Ons (select any extras)</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="2 Acrylic toes - $15"> 2 Acrylic toes (+$15)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Acrylic nails set - $25"> Acrylic nails set (+$25)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Design full set - $35"> Design full set (+$35)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Charm full set - $35"> Charm full set (+$35)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Design/charm full set - $49"> Design/charm full set (+$49)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Polish change - $18"> Polish change (+$18)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Acrylic toes refill - $12"> Acrylic toes refill (+$12)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Acrylic nails refill - $42"> Acrylic nails refill (+$42)
+                  </label>
+                </div>
+              </div>
+
+              <!-- Length Add-Ons -->
+              <div class="form-group">
+                <label>Length (for acrylics)</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-length" value="Medium +$10"> Medium (+$10)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-length" value="Long +$15"> Long (+$15)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-length" value="XXL +$20"> XXL (+$20)
+                  </label>
+                </div>
+              </div>
+
+              <!-- Inspo Photo Upload -->
+              <div class="form-group file-upload">
+                <label>Inspo Photo (optional)</label>
+                <input type="file" name="fi-file-inspo" accept="image/*">
+                <small style="font-size:0.6rem; color:#7a5a7c;">Upload a photo of your nail inspiration</small>
+              </div>
+
+              <!-- Notes / Additional Info -->
+              <div class="form-group">
+                <label>Anything else? (design ideas, questions, etc.)</label>
+                <textarea name="fi-text-notes" placeholder="Tell me about your vision or any special requests..."></textarea>
+              </div>
+
+              <div class="booking-note">
+                <strong>📌 Important:</strong> Your preferred date is a request and may not be available. I will reach out to confirm your appointment and handle payment details. A $20 deposit is required to secure your booking.
+              </div>
+
+              <button type="submit" class="submit-btn">Send Booking Request</button>
+            </form>
+
+            <div class="social-row" style="margin-top: 1rem; justify-content: center;">
+              <a href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" rel="noopener" class="social-pill">TikTok</a>
+              <a href="https://instagram.com/ashawniz.nailz" target="_blank" rel="noopener" class="social-pill">IG</a>
             </div>
-          </aside>
+          </div>
         </div>
       </section>
 
-      <!-- ABOUT / LOCATION -->
+      <!-- ABOUT / LOCATION (unchanged) -->
       <section id="location">
         <div class="container">
           <div class="section-heading">
@@ -1170,7 +1345,7 @@
         </div>
       </section>
 
-      <!-- SERVICES -->
+      <!-- SERVICES (updated with correct pricing from your image) -->
       <section id="services">
         <div class="container">
           <div class="section-heading">
@@ -1225,111 +1400,106 @@
                 <span class="price-title">Charm/Design Manicure</span>
                 <span>$55</span>
               </div>
-
-              <div class="addon-title">Length add-ons</div>
-              <div class="price-item">
-                <span class="price-title">Medium</span>
-                <span>+ $10</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Long</span>
-                <span>+ $15</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">XXL</span>
-                <span>+ $20</span>
-              </div>
             </div>
 
-            <!-- Pedicures -->
+            <!-- Pedicures - Updated with your exact pricing -->
             <div class="card service-card">
               <h3>Pedicure Menu</h3>
-              <small>Relaxing, hydrating, and perfect for sandal season.</small>
+              <small>Polish included with all pedicures</small>
 
               <div class="price-item">
-                <span class="price-title">Basic Pedicure</span>
-                <span>$40</span>
+                <span class="price-title">Classic Pedicure</span>
+                <span>$45</span>
               </div>
               <p class="price-desc">
-                Relaxing foot soak, nail shaping, cuticle care &amp; polish.
-              </p>
-
-              <div class="price-item">
-                <span class="price-title">Spa Pedicure</span>
-                <span>$50</span>
-              </div>
-              <p class="price-desc">
-                Includes exfoliating scrub, foot massage &amp; moisturizing mask.
+                Nail shaping, cuticle care, polish & relaxing soak.
               </p>
 
               <div class="price-item">
                 <span class="price-title">Deluxe Pedicure</span>
-                <span>$65</span>
+                <span>$50</span>
               </div>
               <p class="price-desc">
-                Deep exfoliating scrub, callus treatment, hot towel wrap, and soothing massage to leave your feet silky
-                and refreshed.
+                Exfoliating scrub, massage & polish.
               </p>
 
               <div class="price-item">
-                <span class="price-title">Luxurious Pedicure</span>
-                <span>$75</span>
+                <span class="price-title">Luxury Pedicure</span>
+                <span>$55</span>
               </div>
               <p class="price-desc">
-                Full pampering with exfoliation, hot stones, jelly pedicure, and an extended massage for total
-                relaxation.
+                Hot stones, hydrating mask, extended massage & polish.
+              </p>
+              <p class="price-desc" style="margin-top:0.5rem;">
+                ✨ Dry pedicure also available — just ask!
               </p>
             </div>
 
-            <!-- Other services -->
+            <!-- Add-Ons & Other Services - Updated from your image -->
             <div class="card service-card">
-              <h3>Other Services</h3>
-              <small>For when you just need a quick fix or removal.</small>
+              <h3>Add-Ons & Refills</h3>
+              <small>Extras to complete your look</small>
 
+              <div class="price-item">
+                <span class="price-title">2 Acrylic toes</span>
+                <span>$15</span>
+              </div>
+              <div class="price-item">
+                <span class="price-title">Acrylic nails set</span>
+                <span>$25</span>
+              </div>
+              <div class="price-item">
+                <span class="price-title">Design full set</span>
+                <span>$35</span>
+              </div>
+              <div class="price-item">
+                <span class="price-title">Charm full set</span>
+                <span>$35</span>
+              </div>
+              <div class="price-item">
+                <span class="price-title">Design/charm full set</span>
+                <span>$49</span>
+              </div>
+              <div class="price-item">
+                <span class="price-title">Freestyle</span>
+                <span>$50</span>
+              </div>
+              
+              <div class="price-item" style="margin-top: 0.8rem;">
+                <span class="price-title">Polish change</span>
+                <span>$18</span>
+              </div>
+              <div class="price-item">
+                <span class="price-title">Acrylic toes refill</span>
+                <span>$12</span>
+              </div>
+              <p class="price-desc">*must have at least all 5 toes still on</p>
+              <div class="price-item">
+                <span class="price-title">Acrylic nails refill</span>
+                <span>$42</span>
+              </div>
+              <p class="price-desc">*must have at least 4 nails on</p>
               <div class="price-item">
                 <span class="price-title">Nail Repair</span>
                 <span>$10 each</span>
               </div>
-
               <div class="price-item">
                 <span class="price-title">Soak Off</span>
                 <span>$15</span>
               </div>
-
               <div class="price-item">
                 <span class="price-title">Deposit</span>
                 <span>$20</span>
               </div>
               <p class="price-desc">
-                Non-refundable deposit required to secure your appointment. Goes toward your total.
+                Non-refundable deposit required to secure your appointment.
               </p>
-
-              <p class="price-desc">
-                Book via DM on TikTok or Instagram.
-              </p>
-            </div>
-          </div>
-
-          <!-- Booking CTA -->
-          <div class="booking-strip" id="contact">
-            <div class="booking-strip-text">
-              <strong>Ready to book?</strong><br />
-              Send a DM with your name, service, preferred date/time, and your inspo photo so your nails can be planned
-              before you arrive.
-            </div>
-            <div class="booking-strip-actions">
-              <a class="btn-primary" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" rel="noopener">
-                📲 DM on TikTok
-              </a>
-              <a class="btn-secondary" href="https://instagram.com/ashawniz.nailz" target="_blank" rel="noopener">
-                💖 DM on Instagram
-              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- POLICIES -->
+      <!-- POLICIES (unchanged) -->
       <section id="policies">
         <div class="container">
           <div class="section-heading">
@@ -1342,7 +1512,6 @@
           </div>
 
           <div class="policy-grid">
-            <!-- Deposits -->
             <div class="card policy-card">
               <div class="policy-tag-row">
                 <span class="policy-tag">Deposits</span>
@@ -1360,7 +1529,6 @@
               </ul>
             </div>
 
-            <!-- Late / No show -->
             <div class="card policy-card">
               <div class="policy-tag-row">
                 <span class="policy-tag">Timing</span>
@@ -1378,7 +1546,6 @@
               </p>
             </div>
 
-            <!-- Prep / Payments / Respect -->
             <div class="card policy-card">
               <div class="policy-tag-row">
                 <span class="policy-tag">Nail prep</span>
@@ -1468,7 +1635,7 @@
         </div>
 
         <div class="footer-bottom">
-          <span>Bookings available via DM. Based in Florence, SC area.</span>
+          <span>Bookings available via DM or booking form. Based in Florence, SC area.</span>
           <span>Website design by your web designer 👑</span>
         </div>
       </div>
@@ -1511,6 +1678,16 @@
 
       nextBtn.addEventListener("click", () => {
         track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
+      });
+    }
+
+    // Form submission success handling
+    const form = document.getElementById('bookingForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        // Form will submit normally to Forminit.io
+        // You'll receive email notifications automatically
+        console.log('Booking form submitted');
       });
     }
   </script>
