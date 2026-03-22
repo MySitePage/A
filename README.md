@@ -1135,7 +1135,7 @@
             </div>
           </div>
 
-          <!-- BOOKING FORM - Connected to Forminit.io -->
+          <!-- BOOKING FORM - Connected to Forminit.io with new endpoint -->
           <div class="booking-card" id="booking">
             <div class="booking-header">
               <span>📅</span>
@@ -1145,7 +1145,7 @@
               Fill out the form below. I'll reach out within 24 hours to confirm your date & time.
             </div>
 
-            <form action="https://forminit.com/f/ubtd9cmvaiy" method="POST" enctype="multipart/form-data" id="bookingForm">
+            <form action="https://forminit.com/f/ubtd9cmwaicy" method="POST" enctype="multipart/form-data" id="bookingForm">
               <!-- Contact Information -->
               <div class="form-row">
                 <div class="form-group">
@@ -1221,9 +1221,6 @@
                     <input type="checkbox" name="fi-checkbox-addons" value="2 Acrylic toes - $15"> 2 Acrylic toes (+$15)
                   </label>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Acrylic nails set - $25"> Acrylic nails set (+$25)
-                  </label>
-                  <label class="checkbox-item">
                     <input type="checkbox" name="fi-checkbox-addons" value="Design full set - $35"> Design full set (+$35)
                   </label>
                   <label class="checkbox-item">
@@ -1240,6 +1237,9 @@
                   </label>
                   <label class="checkbox-item">
                     <input type="checkbox" name="fi-checkbox-addons" value="Acrylic nails refill - $42"> Acrylic nails refill (+$42)
+                  </label>
+                  <label class="checkbox-item">
+                    <input type="checkbox" name="fi-checkbox-addons" value="Freestyle - $50"> Freestyle (+$50)
                   </label>
                 </div>
               </div>
@@ -1288,7 +1288,7 @@
         </div>
       </section>
 
-      <!-- ABOUT / LOCATION (unchanged) -->
+      <!-- ABOUT / LOCATION -->
       <section id="location">
         <div class="container">
           <div class="section-heading">
@@ -1345,7 +1345,7 @@
         </div>
       </section>
 
-      <!-- SERVICES (updated with correct pricing from your image) -->
+      <!-- SERVICES -->
       <section id="services">
         <div class="container">
           <div class="section-heading">
@@ -1402,7 +1402,7 @@
               </div>
             </div>
 
-            <!-- Pedicures - Updated with your exact pricing -->
+            <!-- Pedicures -->
             <div class="card service-card">
               <h3>Pedicure Menu</h3>
               <small>Polish included with all pedicures</small>
@@ -1435,7 +1435,7 @@
               </p>
             </div>
 
-            <!-- Add-Ons & Other Services - Updated from your image -->
+            <!-- Add-Ons & Other Services -->
             <div class="card service-card">
               <h3>Add-Ons & Refills</h3>
               <small>Extras to complete your look</small>
@@ -1443,10 +1443,6 @@
               <div class="price-item">
                 <span class="price-title">2 Acrylic toes</span>
                 <span>$15</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Acrylic nails set</span>
-                <span>$25</span>
               </div>
               <div class="price-item">
                 <span class="price-title">Design full set</span>
@@ -1499,7 +1495,7 @@
         </div>
       </section>
 
-      <!-- POLICIES (unchanged) -->
+      <!-- POLICIES -->
       <section id="policies">
         <div class="container">
           <div class="section-heading">
@@ -1636,7 +1632,6 @@
 
         <div class="footer-bottom">
           <span>Bookings available via DM or booking form. Based in Florence, SC area.</span>
-          <span>Website design by your web designer 👑</span>
         </div>
       </div>
     </footer>
@@ -1681,12 +1676,10 @@
       });
     }
 
-    // Form submission success handling
+    // Form submission handling
     const form = document.getElementById('bookingForm');
     if (form) {
       form.addEventListener('submit', function(e) {
-        // Form will submit normally to Forminit.io
-        // You'll receive email notifications automatically
         console.log('Booking form submitted');
       });
     }
