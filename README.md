@@ -1135,7 +1135,7 @@
             </div>
           </div>
 
-          <!-- BOOKING FORM - Updated Forminit endpoint -->
+          <!-- BOOKING FORM - Fixed phone field -->
           <div class="booking-card" id="booking">
             <div class="booking-header">
               <span>📅</span>
@@ -1161,7 +1161,7 @@
               <div class="form-row">
                 <div class="form-group">
                   <label>Phone *</label>
-                  <input type="tel" name="fi-sender-phone" placeholder="(123) 456-7890" required>
+                  <input type="text" name="fi-sender-phone" placeholder="(123) 456-7890" required>
                 </div>
                 <div class="form-group">
                   <label>Instagram (optional)</label>
