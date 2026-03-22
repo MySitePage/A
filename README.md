@@ -1135,7 +1135,7 @@
             </div>
           </div>
 
-          <!-- BOOKING FORM - Connected to Forminit.io with new endpoint -->
+          <!-- BOOKING FORM - Updated Forminit endpoint -->
           <div class="booking-card" id="booking">
             <div class="booking-header">
               <span>📅</span>
@@ -1145,7 +1145,7 @@
               Fill out the form below. I'll reach out within 24 hours to confirm your date & time.
             </div>
 
-            <form action="https://forminit.com/f/ubtd9cmwaicy" method="POST" enctype="multipart/form-data" id="bookingForm">
+            <form action="https://forminit.com/f/aolqlxnb" method="POST" enctype="multipart/form-data" id="bookingForm">
               <!-- Contact Information -->
               <div class="form-row">
                 <div class="form-group">
@@ -1673,14 +1673,6 @@
 
       nextBtn.addEventListener("click", () => {
         track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
-      });
-    }
-
-    // Form submission handling
-    const form = document.getElementById('bookingForm');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        console.log('Booking form submitted');
       });
     }
   </script>
