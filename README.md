@@ -1135,7 +1135,7 @@
             </div>
           </div>
 
-          <!-- BOOKING FORM - No phone field, email is primary contact -->
+          <!-- BOOKING FORM - Updated Forminit endpoint -->
           <div class="booking-card" id="booking">
             <div class="booking-header">
               <span>📅</span>
