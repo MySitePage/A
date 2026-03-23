@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Ashawniz Nailz | South Carolina Nail Tech</title>
-  <meta name="description" content="Ashawniz Nailz — registered cosmetologist in South Carolina. Acrylic sets, pedicures, custom designs, and mobile services in Florence, SC area. Book your glam set today." />
+  <meta name="description" content="Ashawniz Nailz — registered cosmetologist in South Carolina. Acrylic sets, pedicures, custom designs, and mobile services in Florence, SC area." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -490,7 +490,7 @@
   </header>
 
   <main>
-    <!-- HERO SECTION with REPLACED FORM ID: https://forminit.com/f/rw0ekqq2y6e -->
+    <!-- HERO SECTION with REPLACED FORM ID and OPTIONAL PHONE FIELD -->
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div>
@@ -509,19 +509,22 @@
           <div class="hero-meta">Send your nail inspo photo when booking so your set can be customized just for you.</div>
         </div>
 
-        <!-- BOOKING FORM - REPLACED FORM ID: rw0ekqq2y6e -->
+        <!-- BOOKING FORM - REPLACED FORM ID: rw0ekqq2y6e & PHONE FIELD IS NOW OPTIONAL -->
         <div class="booking-card" id="booking">
           <div class="booking-header"><span>📅</span><span>Request Appointment</span></div>
           <div class="booking-sub">Fill out the form below. I'll reach out within 24 hours to confirm your date & time.</div>
 
-          <!-- NEW FORM ACTION: https://forminit.com/f/rw0ekqq2y6e -->
           <form action="https://forminit.com/f/rw0ekqq2y6e" method="POST" enctype="multipart/form-data" id="bookingForm">
             <div class="form-row">
               <div class="form-group"><label>Full Name *</label><input type="text" name="fi-sender-fullName" placeholder="First & last name" required></div>
               <div class="form-group"><label>Email *</label><input type="email" name="fi-sender-email" placeholder="your@email.com" required></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label>Phone *</label><input type="tel" name="fi-sender-phone" placeholder="(123) 456-7890" required></div>
+              <div class="form-group">
+                <label>Phone <span style="font-weight:400; text-transform:none;">(optional)</span></label>
+                <input type="tel" name="fi-sender-phone" placeholder="+1 123 456 7890">
+                <small style="font-size:0.6rem; display:block; margin-top:0.2rem;">Include country code (e.g., +1 for US). Not required, but helpful for confirming your appointment.</small>
+              </div>
               <div class="form-group"><label>Instagram (optional)</label><input type="text" name="fi-text-instagram" placeholder="@username - so I can tag you!"></div>
             </div>
             <div class="form-row">
