@@ -1141,7 +1141,7 @@
             </div>
           </div>
 
-          <!-- BOOKING FORM - Fixed with AJAX submission -->
+          <!-- BOOKING FORM - Updated endpoint and phone added back -->
           <div class="booking-card" id="booking">
             <div class="booking-header">
               <span>📅</span>
@@ -1152,7 +1152,7 @@
             </div>
 
             <form id="bookingForm" enctype="multipart/form-data">
-              <!-- Contact Information -->
+              <!-- Contact Information with phone added back -->
               <div class="form-group">
                 <label>Full Name *</label>
                 <input type="text" name="fi-sender-fullName" placeholder="First & last name" required>
@@ -1161,6 +1161,11 @@
               <div class="form-group">
                 <label>Email *</label>
                 <input type="email" name="fi-sender-email" placeholder="your@email.com" required>
+              </div>
+
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" name="fi-sender-phone" placeholder="(123) 456-7890" required>
               </div>
 
               <div class="form-group">
@@ -1185,30 +1190,14 @@
               <div class="form-group">
                 <label>Select Services (can choose multiple) *</label>
                 <div class="checkbox-group">
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Full Set Acrylic - $60"> Full Set Acrylic ($60)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Acrylic Design Set - $75"> Acrylic Design ($75)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm Set - $75"> Acrylic Charm ($75)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm/Design Set - $85"> Charm/Design Set ($85)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Basic Manicure - $45"> Basic Manicure ($45)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Classic Pedicure - $45"> Classic Pedicure ($45)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Deluxe Pedicure - $50"> Deluxe Pedicure ($50)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-service" value="Luxury Pedicure - $55"> Luxury Pedicure ($55)
-                  </label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Full Set Acrylic - $60"> Full Set Acrylic ($60)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Acrylic Design Set - $75"> Acrylic Design ($75)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm Set - $75"> Acrylic Charm ($75)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm/Design Set - $85"> Charm/Design Set ($85)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Basic Manicure - $45"> Basic Manicure ($45)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Classic Pedicure - $45"> Classic Pedicure ($45)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Deluxe Pedicure - $50"> Deluxe Pedicure ($50)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Luxury Pedicure - $55"> Luxury Pedicure ($55)</label>
                 </div>
               </div>
 
@@ -1216,30 +1205,14 @@
               <div class="form-group">
                 <label>Add-Ons (select any extras)</label>
                 <div class="checkbox-group">
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="2 Acrylic toes - $15"> 2 Acrylic toes (+$15)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Design full set - $35"> Design full set (+$35)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Charm full set - $35"> Charm full set (+$35)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Design/charm full set - $49"> Design/charm full set (+$49)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Polish change - $18"> Polish change (+$18)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Acrylic toes refill - $12"> Acrylic toes refill (+$12)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Acrylic nails refill - $42"> Acrylic nails refill (+$42)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-addons" value="Freestyle - $50"> Freestyle (+$50)
-                  </label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="2 Acrylic toes - $15"> 2 Acrylic toes (+$15)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Design full set - $35"> Design full set (+$35)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Charm full set - $35"> Charm full set (+$35)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Design/charm full set - $49"> Design/charm full set (+$49)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Polish change - $18"> Polish change (+$18)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Acrylic toes refill - $12"> Acrylic toes refill (+$12)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Acrylic nails refill - $42"> Acrylic nails refill (+$42)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Freestyle - $50"> Freestyle (+$50)</label>
                 </div>
               </div>
 
@@ -1247,15 +1220,9 @@
               <div class="form-group">
                 <label>Length (for acrylics)</label>
                 <div class="checkbox-group">
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-length" value="Medium +$10"> Medium (+$10)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-length" value="Long +$15"> Long (+$15)
-                  </label>
-                  <label class="checkbox-item">
-                    <input type="checkbox" name="fi-checkbox-length" value="XXL +$20"> XXL (+$20)
-                  </label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-length" value="Medium +$10"> Medium (+$10)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-length" value="Long +$15"> Long (+$15)</label>
+                  <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-length" value="XXL +$20"> XXL (+$20)</label>
                 </div>
               </div>
 
@@ -1288,7 +1255,7 @@
         </div>
       </section>
 
-      <!-- REST OF THE SECTIONS (ABOUT, SERVICES, POLICIES, GALLERY, FOOTER) - SAME AS BEFORE -->
+      <!-- ABOUT / LOCATION -->
       <section id="location">
         <div class="container">
           <div class="section-heading">
@@ -1336,6 +1303,7 @@
         </div>
       </section>
 
+      <!-- SERVICES -->
       <section id="services">
         <div class="container">
           <div class="section-heading">
@@ -1393,6 +1361,7 @@
         </div>
       </section>
 
+      <!-- POLICIES -->
       <section id="policies">
         <div class="container">
           <div class="section-heading">
@@ -1428,6 +1397,7 @@
         </div>
       </section>
 
+      <!-- GALLERY / SWIPE -->
       <section id="gallery">
         <div class="container">
           <div class="section-heading">
@@ -1506,7 +1476,7 @@
       nextBtn.addEventListener("click", () => track.scrollBy({ left: scrollAmount(), behavior: "smooth" }));
     }
 
-    // AJAX Form Submission - prevents page reload and handles the error
+    // AJAX Form Submission with new endpoint
     const form = document.getElementById('bookingForm');
     const statusDiv = document.getElementById('formStatus');
 
@@ -1518,7 +1488,7 @@
       const formData = new FormData(form);
       
       try {
-        const response = await fetch('https://forminit.com/f/ubtd9cmwaiy', {
+        const response = await fetch('https://forminit.com/f/rw0ekqq2y6e', {
           method: 'POST',
           body: formData
         });
