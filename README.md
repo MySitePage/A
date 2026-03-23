@@ -554,6 +554,12 @@
       background: rgba(255, 255, 255, 0.9);
       border-radius: 24px;
       color: var(--text-dark);
+      margin-top: 1rem;
+    }
+
+    .success-message h4 {
+      color: var(--purple-dark);
+      margin-bottom: 0.5rem;
     }
 
     .social-row {
@@ -1135,7 +1141,7 @@
             </div>
           </div>
 
-          <!-- BOOKING FORM - Updated Forminit endpoint -->
+          <!-- BOOKING FORM - Fixed with AJAX submission -->
           <div class="booking-card" id="booking">
             <div class="booking-header">
               <span>📅</span>
@@ -1145,8 +1151,8 @@
               Fill out the form below. I'll reach out within 24 hours to confirm your date & time.
             </div>
 
-            <form action="https://forminit.com/f/ubtd9cmwaiy" method="POST" enctype="multipart/form-data" id="bookingForm">
-              <!-- Contact Information - Phone removed -->
+            <form id="bookingForm" enctype="multipart/form-data">
+              <!-- Contact Information -->
               <div class="form-group">
                 <label>Full Name *</label>
                 <input type="text" name="fi-sender-fullName" placeholder="First & last name" required>
@@ -1175,7 +1181,7 @@
                 </div>
               </div>
 
-              <!-- Services (Cart style - multiple selection) -->
+              <!-- Services -->
               <div class="form-group">
                 <label>Select Services (can choose multiple) *</label>
                 <div class="checkbox-group">
@@ -1206,7 +1212,7 @@
                 </div>
               </div>
 
-              <!-- Add-Ons (gems, charms, etc.) -->
+              <!-- Add-Ons -->
               <div class="form-group">
                 <label>Add-Ons (select any extras)</label>
                 <div class="checkbox-group">
@@ -1260,7 +1266,7 @@
                 <small style="font-size:0.6rem; color:#7a5a7c;">Upload a photo of your nail inspiration</small>
               </div>
 
-              <!-- Notes / Additional Info -->
+              <!-- Notes -->
               <div class="form-group">
                 <label>Anything else? (design ideas, questions, etc.)</label>
                 <textarea name="fi-text-notes" placeholder="Tell me about your vision or any special requests..."></textarea>
@@ -1271,6 +1277,7 @@
               </div>
 
               <button type="submit" class="submit-btn">Send Booking Request</button>
+              <div id="formStatus" style="margin-top: 1rem; text-align: center;"></div>
             </form>
 
             <div class="social-row" style="margin-top: 1rem; justify-content: center;">
@@ -1281,7 +1288,7 @@
         </div>
       </section>
 
-      <!-- ABOUT / LOCATION -->
+      <!-- REST OF THE SECTIONS (ABOUT, SERVICES, POLICIES, GALLERY, FOOTER) - SAME AS BEFORE -->
       <section id="location">
         <div class="container">
           <div class="section-heading">
@@ -1302,18 +1309,9 @@
                 a set that fits your lifestyle, budget, and style.
               </p>
               <ul class="about-list">
-                <li>
-                  <span class="about-dot"></span>
-                  <span>Soft, classy, colorful, or extra — all styles welcome.</span>
-                </li>
-                <li>
-                  <span class="about-dot"></span>
-                  <span>Clean tools, detailed prep, and quality products every time.</span>
-                </li>
-                <li>
-                  <span class="about-dot"></span>
-                  <span>Respectful, professional environment where your time matters.</span>
-                </li>
+                <li><span class="about-dot"></span><span>Soft, classy, colorful, or extra — all styles welcome.</span></li>
+                <li><span class="about-dot"></span><span>Clean tools, detailed prep, and quality products every time.</span></li>
+                <li><span class="about-dot"></span><span>Respectful, professional environment where your time matters.</span></li>
               </ul>
             </div>
 
@@ -1338,7 +1336,6 @@
         </div>
       </section>
 
-      <!-- SERVICES -->
       <section id="services">
         <div class="container">
           <div class="section-heading">
@@ -1348,253 +1345,108 @@
           </div>
 
           <div class="services-grid">
-            <!-- Acrylic Sets & Manicures -->
             <div class="card service-card">
               <h3>Acrylic Sets & Manicures</h3>
               <small>Custom designs, charms, &amp; glam details.</small>
-
-              <div class="price-item">
-                <span class="price-title">Full Set Acrylic Nails</span>
-                <span>$60</span>
-              </div>
-              
-              <div class="price-item">
-                <span class="price-title">Acrylic Design Set</span>
-                <span>$75</span>
-              </div>
-
-              <div class="price-item">
-                <span class="price-title">Acrylic Charm Set</span>
-                <span>$75</span>
-              </div>
-
-              <div class="price-item">
-                <span class="price-title">Acrylic Charm/Design Set</span>
-                <span>$85</span>
-              </div>
-
-              <div class="price-item">
-                <span class="price-title">Freestyle</span>
-                <span>$65</span>
-              </div>
+              <div class="price-item"><span class="price-title">Full Set Acrylic Nails</span><span>$60</span></div>
+              <div class="price-item"><span class="price-title">Acrylic Design Set</span><span>$75</span></div>
+              <div class="price-item"><span class="price-title">Acrylic Charm Set</span><span>$75</span></div>
+              <div class="price-item"><span class="price-title">Acrylic Charm/Design Set</span><span>$85</span></div>
+              <div class="price-item"><span class="price-title">Freestyle</span><span>$65</span></div>
               <p class="price-desc">(Nail tech choice only)</p>
-
-              <div class="price-item" style="margin-top: 0.8rem;">
-                <span class="price-title">Basic Manicure</span>
-                <span>$45</span>
-              </div>
-
-              <div class="price-item">
-                <span class="price-title">Design Manicure</span>
-                <span>$50</span>
-              </div>
-
-              <div class="price-item">
-                <span class="price-title">Charm/Design Manicure</span>
-                <span>$55</span>
-              </div>
+              <div class="price-item" style="margin-top: 0.8rem;"><span class="price-title">Basic Manicure</span><span>$45</span></div>
+              <div class="price-item"><span class="price-title">Design Manicure</span><span>$50</span></div>
+              <div class="price-item"><span class="price-title">Charm/Design Manicure</span><span>$55</span></div>
             </div>
 
-            <!-- Pedicures -->
             <div class="card service-card">
               <h3>Pedicure Menu</h3>
               <small>Polish included with all pedicures</small>
-
-              <div class="price-item">
-                <span class="price-title">Classic Pedicure</span>
-                <span>$45</span>
-              </div>
-              <p class="price-desc">
-                Nail shaping, cuticle care, polish & relaxing soak.
-              </p>
-
-              <div class="price-item">
-                <span class="price-title">Deluxe Pedicure</span>
-                <span>$50</span>
-              </div>
-              <p class="price-desc">
-                Exfoliating scrub, massage & polish.
-              </p>
-
-              <div class="price-item">
-                <span class="price-title">Luxury Pedicure</span>
-                <span>$55</span>
-              </div>
-              <p class="price-desc">
-                Hot stones, hydrating mask, extended massage & polish.
-              </p>
-              <p class="price-desc" style="margin-top:0.5rem;">
-                ✨ Dry pedicure also available — just ask!
-              </p>
+              <div class="price-item"><span class="price-title">Classic Pedicure</span><span>$45</span></div>
+              <p class="price-desc">Nail shaping, cuticle care, polish & relaxing soak.</p>
+              <div class="price-item"><span class="price-title">Deluxe Pedicure</span><span>$50</span></div>
+              <p class="price-desc">Exfoliating scrub, massage & polish.</p>
+              <div class="price-item"><span class="price-title">Luxury Pedicure</span><span>$55</span></div>
+              <p class="price-desc">Hot stones, hydrating mask, extended massage & polish.</p>
+              <p class="price-desc" style="margin-top:0.5rem;">✨ Dry pedicure also available — just ask!</p>
             </div>
 
-            <!-- Add-Ons & Other Services -->
             <div class="card service-card">
               <h3>Add-Ons & Refills</h3>
               <small>Extras to complete your look</small>
-
-              <div class="price-item">
-                <span class="price-title">2 Acrylic toes</span>
-                <span>$15</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Design full set</span>
-                <span>$35</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Charm full set</span>
-                <span>$35</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Design/charm full set</span>
-                <span>$49</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Freestyle</span>
-                <span>$50</span>
-              </div>
-              
-              <div class="price-item" style="margin-top: 0.8rem;">
-                <span class="price-title">Polish change</span>
-                <span>$18</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Acrylic toes refill</span>
-                <span>$12</span>
-              </div>
+              <div class="price-item"><span class="price-title">2 Acrylic toes</span><span>$15</span></div>
+              <div class="price-item"><span class="price-title">Design full set</span><span>$35</span></div>
+              <div class="price-item"><span class="price-title">Charm full set</span><span>$35</span></div>
+              <div class="price-item"><span class="price-title">Design/charm full set</span><span>$49</span></div>
+              <div class="price-item"><span class="price-title">Freestyle</span><span>$50</span></div>
+              <div class="price-item" style="margin-top: 0.8rem;"><span class="price-title">Polish change</span><span>$18</span></div>
+              <div class="price-item"><span class="price-title">Acrylic toes refill</span><span>$12</span></div>
               <p class="price-desc">*must have at least all 5 toes still on</p>
-              <div class="price-item">
-                <span class="price-title">Acrylic nails refill</span>
-                <span>$42</span>
-              </div>
+              <div class="price-item"><span class="price-title">Acrylic nails refill</span><span>$42</span></div>
               <p class="price-desc">*must have at least 4 nails on</p>
-              <div class="price-item">
-                <span class="price-title">Nail Repair</span>
-                <span>$10 each</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Soak Off</span>
-                <span>$15</span>
-              </div>
-              <div class="price-item">
-                <span class="price-title">Deposit</span>
-                <span>$20</span>
-              </div>
-              <p class="price-desc">
-                Non-refundable deposit required to secure your appointment.
-              </p>
+              <div class="price-item"><span class="price-title">Nail Repair</span><span>$10 each</span></div>
+              <div class="price-item"><span class="price-title">Soak Off</span><span>$15</span></div>
+              <div class="price-item"><span class="price-title">Deposit</span><span>$20</span></div>
+              <p class="price-desc">Non-refundable deposit required to secure your appointment.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- POLICIES -->
       <section id="policies">
         <div class="container">
           <div class="section-heading">
             <span class="kicker">Policies</span>
             <h2>Before you book</h2>
-            <p>
-              Please read through all policies before booking. Deposits and time rules help keep everything fair and
-              professional for every client.
-            </p>
+            <p>Please read through all policies before booking. Deposits and time rules help keep everything fair and professional for every client.</p>
           </div>
 
           <div class="policy-grid">
             <div class="card policy-card">
-              <div class="policy-tag-row">
-                <span class="policy-tag">Deposits</span>
-                <span class="policy-tag">$20 · Non-refundable</span>
-              </div>
+              <div class="policy-tag-row"><span class="policy-tag">Deposits</span><span class="policy-tag">$20 · Non-refundable</span></div>
               <h3>Deposit Policy</h3>
-              <p>
-                A <b>$20 non-refundable deposit</b> is required to secure every appointment. Your deposit goes toward your total
-                balance.
-              </p>
-              <ul>
-                <li><span class="about-dot"></span><span>Deposits must be sent within 24 hours of booking.</span></li>
-                <li><span class="about-dot"></span><span>If your deposit is not received on time, your appointment will be canceled.</span></li>
-                <li><span class="about-dot"></span><span>Once services are complete, there are <b>no refunds</b>.</span></li>
-              </ul>
+              <p>A <b>$20 non-refundable deposit</b> is required to secure every appointment. Your deposit goes toward your total balance.</p>
+              <ul><li><span class="about-dot"></span><span>Deposits must be sent within 24 hours of booking.</span></li><li><span class="about-dot"></span><span>If your deposit is not received on time, your appointment will be canceled.</span></li><li><span class="about-dot"></span><span>Once services are complete, there are <b>no refunds</b>.</span></li></ul>
             </div>
 
             <div class="card policy-card">
-              <div class="policy-tag-row">
-                <span class="policy-tag">Timing</span>
-                <span class="policy-tag">Late &amp; No-Show</span>
-              </div>
+              <div class="policy-tag-row"><span class="policy-tag">Timing</span><span class="policy-tag">Late &amp; No-Show</span></div>
               <h3>Late &amp; No-Show Policy</h3>
               <p><b>Grace Period:</b> There is a 10-minute grace period.</p>
-              <ul>
-                <li><span class="about-dot"></span><span>After 10 minutes, a <b>$10 late fee</b> is added.</span></li>
-                <li><span class="about-dot"></span><span>After 15 minutes, your appointment may be canceled.</span></li>
-              </ul>
-              <p style="margin-top:0.4rem;">
-                <b>No Call / No Show:</b> If you do not show up or contact in advance, you can be blocked from booking
-                future appointments.
-              </p>
+              <ul><li><span class="about-dot"></span><span>After 10 minutes, a <b>$10 late fee</b> is added.</span></li><li><span class="about-dot"></span><span>After 15 minutes, your appointment may be canceled.</span></li></ul>
+              <p style="margin-top:0.4rem;"><b>No Call / No Show:</b> If you do not show up or contact in advance, you can be blocked from booking future appointments.</p>
             </div>
 
             <div class="card policy-card">
-              <div class="policy-tag-row">
-                <span class="policy-tag">Nail prep</span>
-                <span class="policy-tag">Payments</span>
-              </div>
+              <div class="policy-tag-row"><span class="policy-tag">Nail prep</span><span class="policy-tag">Payments</span></div>
               <h3>Nail Prep &amp; Payments</h3>
-              <p>
-                Please arrive with <b>bare nails</b> unless you booked a soak-off. Acrylic removal or soak-off is not
-                included unless it is added to your appointment.
-              </p>
-              <p>
-                Remaining balances can be paid in <b>cash</b> or via <b>Cash App: $AshawnizNailz</b>.
-              </p>
-              <p>
-                <b>Respect My Time:</b> Come ready, be respectful, and communicate any changes ahead of time. Any
-                disrespect before, during, or after your appointment can result in you being blocked as a client.
-              </p>
+              <p>Please arrive with <b>bare nails</b> unless you booked a soak-off. Acrylic removal or soak-off is not included unless it is added to your appointment.</p>
+              <p>Remaining balances can be paid in <b>cash</b> or via <b>Cash App: $AshawnizNailz</b>.</p>
+              <p><b>Respect My Time:</b> Come ready, be respectful, and communicate any changes ahead of time. Any disrespect before, during, or after your appointment can result in you being blocked as a client.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- GALLERY / SWIPE -->
       <section id="gallery">
         <div class="container">
           <div class="section-heading">
             <span class="kicker">Client work</span>
             <h2>Gallery preview</h2>
-            <p>
-              Swipe through some of the nail sets and pedicures created by Ashawniz Nailz. Replace or add more photos
-              anytime as your work grows.
-            </p>
+            <p>Swipe through some of the nail sets and pedicures created by Ashawniz Nailz. Replace or add more photos anytime as your work grows.</p>
           </div>
 
           <div class="card">
             <div class="gallery-strip">
               <div class="gallery-track" id="galleryTrack">
-                <div class="gallery-slide">
-                  <img src="https://i.postimg.cc/ZqYtzPjx/IMG-7932.jpg" alt="Client nail set 1 by Ashawniz Nailz" />
-                </div>
-                <div class="gallery-slide">
-                  <img src="https://i.postimg.cc/ZqYtzPjP/IMG-7936.jpg" alt="Client nail set 2 by Ashawniz Nailz" />
-                </div>
-                <div class="gallery-slide">
-                  <img src="https://i.postimg.cc/R0C5x1Gw/IMG-7937.jpg" alt="Client nail set 3 by Ashawniz Nailz" />
-                </div>
-                <div class="gallery-slide">
-                  <img src="https://i.postimg.cc/XvNS6KxF/IMG-7938.jpg" alt="Client nail set 4 by Ashawniz Nailz" />
-                </div>
-                <div class="gallery-slide">
-                  <img src="https://i.postimg.cc/tgRQGdDx/IMG-7939.jpg" alt="Client nail set 5 by Ashawniz Nailz" />
-                </div>
-                <div class="gallery-slide">
-                  <img src="https://i.postimg.cc/q7BVHcQh/IMG-7940.jpg" alt="Client nail set 6 by Ashawniz Nailz" />
-                </div>
-                <div class="gallery-slide">
-                  <img src="https://i.postimg.cc/R0C5x1GS/IMG-7941.jpg" alt="Client nail set 7 by Ashawniz Nailz" />
-                </div>
+                <div class="gallery-slide"><img src="https://i.postimg.cc/ZqYtzPjx/IMG-7932.jpg" alt="Client nail set 1" /></div>
+                <div class="gallery-slide"><img src="https://i.postimg.cc/ZqYtzPjP/IMG-7936.jpg" alt="Client nail set 2" /></div>
+                <div class="gallery-slide"><img src="https://i.postimg.cc/R0C5x1Gw/IMG-7937.jpg" alt="Client nail set 3" /></div>
+                <div class="gallery-slide"><img src="https://i.postimg.cc/XvNS6KxF/IMG-7938.jpg" alt="Client nail set 4" /></div>
+                <div class="gallery-slide"><img src="https://i.postimg.cc/tgRQGdDx/IMG-7939.jpg" alt="Client nail set 5" /></div>
+                <div class="gallery-slide"><img src="https://i.postimg.cc/q7BVHcQh/IMG-7940.jpg" alt="Client nail set 6" /></div>
+                <div class="gallery-slide"><img src="https://i.postimg.cc/R0C5x1GS/IMG-7941.jpg" alt="Client nail set 7" /></div>
               </div>
-
               <div class="gallery-controls">
                 <div>Swipe left/right on your phone, or use the arrows to see more sets.</div>
                 <div class="gallery-buttons">
@@ -1608,7 +1460,6 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
     <footer>
       <div class="container">
         <div class="footer-top">
@@ -1617,12 +1468,11 @@
             <div class="logo-text-sub" style="margin-top:0.14rem;">South Carolina Nail Tech · Pink &amp; Purple Vibes Only</div>
           </div>
           <div class="footer-socials">
-            <a class="footer-pill" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" rel="noopener">TikTok · @ashawniz.nailz</a>
-            <a class="footer-pill" href="https://instagram.com/ashawniz.nailz" target="_blank" rel="noopener">Instagram · @ashawniz.nailz</a>
-            <a class="footer-pill" href="https://facebook.com/ashawniz.nailz" target="_blank" rel="noopener">Facebook · @ashawniz.nailz</a>
+            <a class="footer-pill" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank">TikTok · @ashawniz.nailz</a>
+            <a class="footer-pill" href="https://instagram.com/ashawniz.nailz" target="_blank">Instagram · @ashawniz.nailz</a>
+            <a class="footer-pill" href="https://facebook.com/ashawniz.nailz" target="_blank">Facebook · @ashawniz.nailz</a>
           </div>
         </div>
-
         <div class="footer-bottom">
           <span>Bookings available via DM or booking form. Based in Florence, SC area.</span>
         </div>
@@ -1630,7 +1480,6 @@
     </footer>
   </div>
 
-  <!-- Smooth scroll + gallery controls -->
   <script>
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(link => {
@@ -1638,14 +1487,9 @@
         const target = document.querySelector(this.getAttribute("href"));
         if (!target) return;
         e.preventDefault();
-        window.scrollTo({
-          top: target.offsetTop - 80,
-          behavior: "smooth"
-        });
+        window.scrollTo({ top: target.offsetTop - 80, behavior: "smooth" });
         const navLinks = document.querySelector(".nav-links");
-        if (navLinks && navLinks.classList.contains("open")) {
-          navLinks.classList.remove("open");
-        }
+        if (navLinks && navLinks.classList.contains("open")) navLinks.classList.remove("open");
       });
     });
 
@@ -1653,21 +1497,46 @@
     const track = document.getElementById("galleryTrack");
     const prevBtn = document.getElementById("galleryPrev");
     const nextBtn = document.getElementById("galleryNext");
-
     if (track && prevBtn && nextBtn) {
       const scrollAmount = () => {
         const slide = track.querySelector(".gallery-slide");
         return slide ? slide.getBoundingClientRect().width + 12 : 250;
       };
-
-      prevBtn.addEventListener("click", () => {
-        track.scrollBy({ left: -scrollAmount(), behavior: "smooth" });
-      });
-
-      nextBtn.addEventListener("click", () => {
-        track.scrollBy({ left: scrollAmount(), behavior: "smooth" });
-      });
+      prevBtn.addEventListener("click", () => track.scrollBy({ left: -scrollAmount(), behavior: "smooth" }));
+      nextBtn.addEventListener("click", () => track.scrollBy({ left: scrollAmount(), behavior: "smooth" }));
     }
+
+    // AJAX Form Submission - prevents page reload and handles the error
+    const form = document.getElementById('bookingForm');
+    const statusDiv = document.getElementById('formStatus');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      statusDiv.innerHTML = '<div style="background: rgba(255,255,240,0.8); padding: 0.8rem; border-radius: 60px;">Sending your request...</div>';
+      
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch('https://forminit.com/f/ubtd9cmwaiy', {
+          method: 'POST',
+          body: formData
+        });
+        
+        if (response.ok) {
+          statusDiv.innerHTML = '<div style="background: rgba(200,230,200,0.9); padding: 0.8rem; border-radius: 60px; color: #2d5a2d;">✓ Request sent! I\'ll reach out within 24 hours to confirm your appointment.</div>';
+          form.reset();
+          setTimeout(() => { statusDiv.innerHTML = ''; }, 5000);
+        } else {
+          const errorText = await response.text();
+          console.error('Submission error:', errorText);
+          statusDiv.innerHTML = '<div style="background: rgba(255,200,200,0.9); padding: 0.8rem; border-radius: 60px;">Something went wrong. Please DM me on Instagram/TikTok to book, or try again.</div>';
+        }
+      } catch (error) {
+        console.error('Network error:', error);
+        statusDiv.innerHTML = '<div style="background: rgba(255,200,200,0.9); padding: 0.8rem; border-radius: 60px;">Unable to submit. Please DM me on Instagram/TikTok to book!</div>';
+      }
+    });
   </script>
 </body>
 </html>
