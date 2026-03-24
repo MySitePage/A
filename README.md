@@ -589,6 +589,7 @@
           <div class="hero-meta">Send your nail inspo photo when booking so your set can be customized just for you.</div>
         </div>
 
+        <!-- BOOKING FORM - PHONE BOX REMOVED -->
         <div class="booking-card" id="booking">
           <div class="booking-header"><span>📅</span><span>Request Appointment</span></div>
           <div class="booking-sub">Fill out the form below. I'll reach out within 24 hours to confirm your date & time.</div>
@@ -598,13 +599,14 @@
               <div class="form-group"><label>Email *</label><input type="email" name="fi-sender-email" placeholder="your@email.com" required></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label>Phone <span style="font-weight:400;">(optional)</span></label><input type="tel" name="fi-sender-phone" placeholder="+1 123 456 7890"><small style="font-size:0.6rem; display:block; margin-top:0.2rem;">Include country code (e.g., +1 for US)</small></div>
-              <div class="form-group"><label>Instagram (optional)</label><input type="text" name="fi-text-instagram" placeholder="@username"></div>
+              <div class="form-group"><label>Instagram (optional)</label><input type="text" name="fi-text-instagram" placeholder="@username - so I can tag you!"></div>
+              <div class="form-group"><label>Preferred Date *</label><input type="date" name="fi-date-preferred" required><small style="font-size:0.6rem;">*request - I will confirm</small></div>
             </div>
             <div class="form-row">
-              <div class="form-group"><label>Preferred Date *</label><input type="date" name="fi-date-preferred" required><small style="font-size:0.6rem;">*request - I will confirm</small></div>
               <div class="form-group"><label>Preferred Time</label><input type="text" name="fi-text-time" placeholder="e.g., 2pm, afternoon"></div>
+              <div class="form-group"><label>Preferred Time</label><input type="text" name="fi-text-time-alt" placeholder="Alternative time (optional)"></div>
             </div>
+
             <div class="form-group"><label>Select Services (can choose multiple) *</label>
               <div class="checkbox-group">
                 <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Full Set Acrylic - $60"> Full Set Acrylic ($60)</label>
@@ -617,6 +619,7 @@
                 <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Luxury Pedicure - $55"> Luxury Pedicure ($55)</label>
               </div>
             </div>
+
             <div class="form-group"><label>Add-Ons (select any extras)</label>
               <div class="checkbox-group">
                 <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="2 Acrylic toes - $15"> 2 Acrylic toes (+$15)</label>
@@ -629,8 +632,15 @@
                 <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Freestyle - $50"> Freestyle (+$50)</label>
               </div>
             </div>
+
             <div class="form-group file-upload"><label>Inspo Photo (optional)</label><input type="file" name="fi-file-inspo" accept="image/*"><small style="font-size:0.6rem;">Upload a photo of your nail inspiration</small></div>
-            <div class="form-group"><label>Anything else? (design ideas, questions, etc.)</label><textarea name="fi-text-notes" placeholder="Tell me about your vision or any special requests..." rows="2"></textarea></div>
+            
+            <!-- UPDATED: Anything else box with phone number prompt -->
+            <div class="form-group">
+              <label>Anything else? (design ideas, questions, etc.)</label>
+              <textarea name="fi-text-notes" placeholder="Add phone number here if you don't wanna communicate through Instagram or email. Also share design ideas, special requests, or any questions!" rows="3"></textarea>
+            </div>
+            
             <div class="booking-note"><strong>📌 Important:</strong> Your preferred date is a request and may not be available. I will reach out to confirm your appointment and handle payment details. A $20 deposit is required to secure your booking.</div>
             <button type="submit" class="submit-btn">Send Booking Request</button>
           </form>
