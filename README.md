@@ -475,6 +475,42 @@
       margin-bottom: 0.5rem;
     }
     
+    /* Travel Fees specific card */
+    .travel-grid {
+      display: grid;
+      gap: 1.3rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 768px) {
+      .travel-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .travel-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .travel-location-list {
+      margin-top: 0.8rem;
+      list-style: none;
+      padding-left: 0;
+    }
+    .travel-location-list li {
+      font-size: 0.8rem;
+      padding: 0.2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-bottom: 1px dashed rgba(255,179,230,0.5);
+    }
+    .travel-location-list li:last-child { border-bottom: none; }
+    .travel-note {
+      background: linear-gradient(135deg, rgba(255, 220, 245, 0.9), rgba(230, 200, 255, 0.9));
+      border-radius: 24px;
+      padding: 0.8rem 1rem;
+      font-size: 0.75rem;
+      text-align: center;
+      font-weight: 500;
+      margin-top: 0.8rem;
+    }
+    
     /* GALLERY */
     .gallery-strip {
       background: rgba(255, 255, 255, 0.85);
@@ -562,7 +598,7 @@
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#policies">Policies</a>
-          <a href="#location">Location</a>
+          <a href="#travel-fees">Travel Fees</a>
           <a href="#gallery">Gallery</a>
           <a href="#booking" class="nav-btn"><span>💅🏾</span><span>Book Now</span></a>
         </div>
@@ -655,6 +691,70 @@
     <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2><p>Full glam acrylic sets or relaxing pedicures — everything with pink & purple energy.</p></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area & Travel</h3><p>Based in Florence, SC. Mobile appointments across South Carolina (travel fees apply). Book via DM or form.</p></div></div></div></section>
 
     <section id="services"><div class="container"><div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance: cash or Cash App <b>$AshawnizNailz</b>.</p></div><div class="services-grid"><div class="card"><h3>Acrylic Sets & Manicures</h3><div class="price-item"><span class="price-title">Full Set Acrylic</span><span>$60</span></div><div class="price-item"><span class="price-title">Acrylic Design Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm/Design</span><span>$85</span></div><div class="price-item"><span class="price-title">Basic Manicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Design Manicure</span><span>$50</span></div></div><div class="card"><h3>Pedicure Menu</h3><div class="price-item"><span class="price-title">Classic Pedicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Deluxe Pedicure</span><span>$50</span></div><div class="price-item"><span class="price-title">Luxury Pedicure</span><span>$55</span></div><p style="font-size:0.75rem; margin-top:0.5rem;">✨ Dry pedicure also available</p></div><div class="card"><h3>Add-Ons & Refills</h3><div class="price-item"><span>2 Acrylic toes</span><span>$15</span></div><div class="price-item"><span>Design full set</span><span>$35</span></div><div class="price-item"><span>Charm full set</span><span>$35</span></div><div class="price-item"><span>Acrylic nails refill</span><span>$42</span></div><div class="price-item"><span>Soak Off</span><span>$15</span></div><div class="price-item"><span>Deposit</span><span>$20</span></div></div></div></div></section>
+
+    <!-- NEW TRAVEL FEES SECTION - ADDED FROM IMAGE -->
+    <section id="travel-fees">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Mobile service</span>
+          <h2>Travel Fees</h2>
+          <p>Covering my travel & setup — ensures a full luxury experience. Fees are categorized per round-trip mileage.</p>
+        </div>
+        <div class="travel-grid">
+          <!-- 0-21 miles -->
+          <div class="card">
+            <div style="font-size:1.8rem; margin-bottom:0.3rem;">📍</div>
+            <h3>0-21 miles · $25</h3>
+            <ul class="travel-location-list">
+              <li>✨ Florence, SC</li>
+              <li>✨ Darlington, SC</li>
+              <li>✨ Timmonsville, SC</li>
+              <li>✨ Ewingtown, SC</li>
+            </ul>
+          </div>
+          <!-- 21-40 miles -->
+          <div class="card">
+            <div style="font-size:1.8rem; margin-bottom:0.3rem;">🚗</div>
+            <h3>21-40 miles · $45 - $50</h3>
+            <ul class="travel-location-list">
+              <li>📍 Hartsville, SC</li>
+              <li>📍 Lake City, SC</li>
+              <li>📍 Marian, SC</li>
+            </ul>
+          </div>
+          <!-- 41-60 miles -->
+          <div class="card">
+            <div style="font-size:1.8rem; margin-bottom:0.3rem;">⛽</div>
+            <h3>41-60 miles · $65 - $75</h3>
+            <div class="policy-tag" style="background:#fce4ff;">Longer trips - must be worth it</div>
+            <ul class="travel-location-list">
+              <li>🌟 Sumter, SC</li>
+              <li>🌟 Mullins, SC</li>
+              <li>🌟 Conway, SC</li>
+            </ul>
+          </div>
+          <!-- 61-80 miles (Far-premium) -->
+          <div class="card">
+            <div style="font-size:1.8rem; margin-bottom:0.3rem;">💎</div>
+            <h3>61-80 miles · $85+</h3>
+            <div class="policy-tag" style="background:#f5e6ff;">Far-premium only</div>
+            <ul class="travel-location-list">
+              <li>🏖️ Myrtle Beach, SC</li>
+              <li>🏛️ Columbia, SC</li>
+            </ul>
+            <div class="travel-note">⭐ Premium extended service — must be pre-approved</div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:1rem; text-align:center;">
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.8rem;">
+            <span class="policy-tag">💅🏾 $ Same day - $30 add ons</span>
+            <span class="policy-tag">👥 For the same house call: $10 off each service!!</span>
+          </div>
+          <p style="margin-top:0.8rem; font-weight:500; font-size:0.85rem;"><strong>📌 Important:</strong> All house calls have to have a $120 minimum to cover my travel and setup. This ensures you get a full luxury experience!!</p>
+          <div style="margin-top:0.7rem; font-size:0.7rem; background:rgba(255,230,250,0.7); border-radius:40px; padding:0.4rem 0.8rem; display:inline-block;">✨ Travel fees are calculated based on round trip distance from Florence, SC ✨</div>
+        </div>
+      </div>
+    </section>
 
     <section id="policies"><div class="container"><div class="section-heading"><span class="kicker">Policies</span><h2>Before you book</h2><p>Deposits and time rules keep everything professional.</p></div><div class="policy-grid"><div class="card"><div><span class="policy-tag">Deposits</span><span class="policy-tag">$20 non-refundable</span></div><h3>Deposit Policy</h3><p>$20 deposit required within 24h of booking. No refunds after services.</p></div><div class="card"><div><span class="policy-tag">Timing</span><span class="policy-tag">Late & No-Show</span></div><h3>Late Policy</h3><p>10-min grace period, after that $10 late fee. After 15 min appointment may be canceled.</p></div><div class="card"><div><span class="policy-tag">Nail prep</span><span class="policy-tag">Payments</span></div><h3>Prep & Payments</h3><p>Arrive with bare nails unless soak-off added. Cash or Cash App accepted.</p></div></div></div></section>
 
