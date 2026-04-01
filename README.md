@@ -625,7 +625,7 @@
           <div class="hero-meta">Send your nail inspo photo when booking so your set can be customized just for you.</div>
         </div>
 
-        <!-- BOOKING FORM - PHONE BOX REMOVED -->
+        <!-- BOOKING FORM -->
         <div class="booking-card" id="booking">
           <div class="booking-header"><span>📅</span><span>Request Appointment</span></div>
           <div class="booking-sub">Fill out the form below. I'll reach out within 24 hours to confirm your date & time.</div>
@@ -640,7 +640,7 @@
             </div>
             <div class="form-row">
               <div class="form-group"><label>Preferred Time</label><input type="text" name="fi-text-time" placeholder="e.g., 2pm, afternoon"></div>
-              <div class="form-group"><label>Preferred Time</label><input type="text" name="fi-text-time-alt" placeholder="Alternative time (optional)"></div>
+              <div class="form-group"><label>Alternative Time</label><input type="text" name="fi-text-time-alt" placeholder="Alternative time (optional)"></div>
             </div>
 
             <div class="form-group"><label>Select Services (can choose multiple) *</label>
@@ -671,7 +671,6 @@
 
             <div class="form-group file-upload"><label>Inspo Photo (optional)</label><input type="file" name="fi-file-inspo" accept="image/*"><small style="font-size:0.6rem;">Upload a photo of your nail inspiration</small></div>
             
-            <!-- UPDATED: Anything else box with phone number prompt -->
             <div class="form-group">
               <label>Anything else? (design ideas, questions, etc.)</label>
               <textarea name="fi-text-notes" placeholder="Add phone number here if you don't wanna communicate through Instagram or email. Also share design ideas, special requests, or any questions!" rows="3"></textarea>
@@ -692,7 +691,7 @@
 
     <section id="services"><div class="container"><div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance: cash or Cash App <b>$AshawnizNailz</b>.</p></div><div class="services-grid"><div class="card"><h3>Acrylic Sets & Manicures</h3><div class="price-item"><span class="price-title">Full Set Acrylic</span><span>$60</span></div><div class="price-item"><span class="price-title">Acrylic Design Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm/Design</span><span>$85</span></div><div class="price-item"><span class="price-title">Basic Manicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Design Manicure</span><span>$50</span></div></div><div class="card"><h3>Pedicure Menu</h3><div class="price-item"><span class="price-title">Classic Pedicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Deluxe Pedicure</span><span>$50</span></div><div class="price-item"><span class="price-title">Luxury Pedicure</span><span>$55</span></div><p style="font-size:0.75rem; margin-top:0.5rem;">✨ Dry pedicure also available</p></div><div class="card"><h3>Add-Ons & Refills</h3><div class="price-item"><span>2 Acrylic toes</span><span>$15</span></div><div class="price-item"><span>Design full set</span><span>$35</span></div><div class="price-item"><span>Charm full set</span><span>$35</span></div><div class="price-item"><span>Acrylic nails refill</span><span>$42</span></div><div class="price-item"><span>Soak Off</span><span>$15</span></div><div class="price-item"><span>Deposit</span><span>$20</span></div></div></div></div></section>
 
-    <!-- NEW TRAVEL FEES SECTION - ADDED FROM IMAGE -->
+    <!-- TRAVEL FEES SECTION - CORRECTED SPELLING: Marion and Effingham -->
     <section id="travel-fees">
       <div class="container">
         <div class="section-heading">
@@ -709,7 +708,7 @@
               <li>✨ Florence, SC</li>
               <li>✨ Darlington, SC</li>
               <li>✨ Timmonsville, SC</li>
-              <li>✨ Ewingtown, SC</li>
+              <li>✨ Effingham, SC</li>
             </ul>
           </div>
           <!-- 21-40 miles -->
@@ -719,7 +718,7 @@
             <ul class="travel-location-list">
               <li>📍 Hartsville, SC</li>
               <li>📍 Lake City, SC</li>
-              <li>📍 Marian, SC</li>
+              <li>📍 Marion, SC</li>
             </ul>
           </div>
           <!-- 41-60 miles -->
@@ -747,7 +746,7 @@
         </div>
         <div class="card" style="margin-top:1rem; text-align:center;">
           <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.8rem;">
-            <span class="policy-tag">💅🏾 $ Same day - $30 add ons</span>
+            <span class="policy-tag">💅🏾 Same day - $30 add ons</span>
             <span class="policy-tag">👥 For the same house call: $10 off each service!!</span>
           </div>
           <p style="margin-top:0.8rem; font-weight:500; font-size:0.85rem;"><strong>📌 Important:</strong> All house calls have to have a $120 minimum to cover my travel and setup. This ensures you get a full luxury experience!!</p>
