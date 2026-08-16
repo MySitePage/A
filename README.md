@@ -609,7 +609,8 @@
           <div class="booking-sub">Schedule your nail appointment instantly using my calendar.</div>
           <div class="calendar-button-container">
             <div id="google-calendar-btn"></div>
-            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" target="_blank" class="direct-booking-link" rel="noopener noreferrer">📆 Open Booking Link</a>
+            <!-- REPLACED BOOKING LINK -->
+            <a href="https://calendar.app.google/meNdHchW6ueV8aKn9" target="_blank" class="direct-booking-link" rel="noopener noreferrer">📆 Open Booking Link</a>
           </div>
           <script>
             (function() {
@@ -618,8 +619,8 @@
                 var checkCalendar = function() {
                   if (window.calendar && window.calendar.schedulingButton) {
                     target.innerHTML = '';
-                    window.calendar.schedulingButton.load({ url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true', color: '#039BE5', label: '📅 Book with Google Calendar', target: target });
-                  } else { target.innerHTML = '<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" target="_blank" class="calendar-link">📅 Book with Google Calendar</a>'; }
+                    window.calendar.schedulingButton.load({ url: 'https://calendar.app.google/meNdHchW6ueV8aKn9', color: '#039BE5', label: '📅 Book with Google Calendar', target: target });
+                  } else { target.innerHTML = '<a href="https://calendar.app.google/meNdHchW6ueV8aKn9" target="_blank" class="calendar-link">📅 Book with Google Calendar</a>'; }
                 };
                 window.addEventListener('load', checkCalendar);
               }
